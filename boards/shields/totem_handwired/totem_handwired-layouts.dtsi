@@ -1,0 +1,59 @@
+#include <physical_layouts.dtsi>
+
+/ {
+    default_layout: default_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout";
+        transform = <&default_transform>;
+        kscan = <&kscan>;
+
+        // Totem 38-tuş yerleşiminin ZMK Studio için X/Y ve rotasyon koordinatları (milimetre cinsinden)
+        keys
+            = <&key_physical_attrs 100 100    0   43    8   0   0> // Sol El - Üst Sıra
+            , <&key_physical_attrs 100 100   99   19    4   0   0>
+            , <&key_physical_attrs 100 100  199    0    0   0   0>
+            , <&key_physical_attrs 100 100  299   10   -4   0   0>
+            , <&key_physical_attrs 100 100  397   27   -8   0   0>
+
+            , <&key_physical_attrs 100 100 1002   27    8   0   0> // Sağ El - Üst Sıra
+            , <&key_physical_attrs 100 100 1100   10    4   0   0>
+            , <&key_physical_attrs 100 100 1200    0    0   0   0>
+            , <&key_physical_attrs 100 100 1300   19   -4   0   0>
+            , <&key_physical_attrs 100 100 1399   43   -8   0   0>
+
+            , <&key_physical_attrs 100 100    0  143    8   0   0> // Sol El - Orta Sıra
+            , <&key_physical_attrs 100 100   99  119    4   0   0>
+            , <&key_physical_attrs 100 100  199  100    0   0   0>
+            , <&key_physical_attrs 100 100  299  110   -4   0   0>
+            , <&key_physical_attrs 100 100  397  127   -8   0   0>
+            , <&key_physical_attrs 100 100  492  175  -12   0   0> // En dış ekstra tuş (G tuşunun yanı)
+
+            , <&key_physical_attrs 100 100  907  175   12   0   0> // En dış ekstra tuş (P tuşunun yanı)
+            , <&key_physical_attrs 100 100 1002  127    8   0   0> // Sağ El - Orta Sıra
+            , <&key_physical_attrs 100 100 1100  110    4   0   0>
+            , <&key_physical_attrs 100 100 1200  100    0   0   0>
+            , <&key_physical_attrs 100 100 1300  119   -4   0   0>
+            , <&key_physical_attrs 100 100 1399  143   -8   0   0>
+
+            , <&key_physical_attrs 100 100    0  243    8   0   0> // Sol El - Alt Sıra
+            , <&key_physical_attrs 100 100   99  219    4   0   0>
+            , <&key_physical_attrs 100 100  199  200    0   0   0>
+            , <&key_physical_attrs 100 100  299  210   -4   0   0>
+            , <&key_physical_attrs 100 100  397  227   -8   0   0>
+
+            , <&key_physical_attrs 100 100 1002  227    8   0   0> // Sağ El - Alt Sıra
+            , <&key_physical_attrs 100 100 1100  210    4   0   0>
+            , <&key_physical_attrs 100 100 1200  200    0   0   0>
+            , <&key_physical_attrs 100 100 1300  219   -4   0   0>
+            , <&key_physical_attrs 100 100 1399  243   -8   0   0>
+
+            , <&key_physical_attrs 100 100  236  312  -15   0   0> // Sol El - Başparmak Tuşları
+            , <&key_physical_attrs 100 100  334  328  -25   0   0>
+            , <&key_physical_attrs 100 100  434  362  -35   0   0>
+
+            , <&key_physical_attrs 100 100  965  362   35   0   0> // Sağ El - Başparmak Tuşları
+            , <&key_physical_attrs 100 100 1065  328   25   0   0>
+            , <&key_physical_attrs 100 100 1163  312   15   0   0>
+            ;
+    };
+};

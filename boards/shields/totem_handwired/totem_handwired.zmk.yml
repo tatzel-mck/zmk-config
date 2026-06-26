@@ -1,0 +1,17 @@
+file_format: "1"
+
+id: totem_handwired
+name: totem-handwired
+type: shield
+
+url: https://example.com
+
+features:
+  - keys
+
+requires:
+  - seeed_xiao
+
+siblings:
+  - totem_handwired_left
+  - totem_handwired_right

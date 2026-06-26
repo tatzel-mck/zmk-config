@@ -1,0 +1,30 @@
+config ZMK_KEYBOARD_NAME
+    default "ToteMCK"
+
+config ZMK_PM
+    default y
+
+config ZMK_SPLIT_BLE
+    default y
+
+if SHIELD_TOTEM_HANDWIRED_LEFT
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif # SHIELD_TOTEM_HANDWIRED_LEFT
+
+if SHIELD_TOTEM_HANDWIRED_LEFT || SHIELD_TOTEM_HANDWIRED_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+# Seeed Xiao BLE için derin uyku (Deep Sleep) modu optimizasyonu
+config ZMK_SLEEP
+    default y
+
+# Batarya seviyesi raporlama (Xiao'nun kendi donanımsal batarya pini için gerekli)
+config ZMK_BATTERY_REPORTING
+    default y
+
+endif # SHIELD_TOTEM_HANDWIRED_LEFT || SHIELD_TOTEM_HANDWIRED_RIGHT
