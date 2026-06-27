@@ -10,7 +10,7 @@
         window_move_l_hold: window_move_l_hold {
             label = "WINDOW_MOVE_L_HOLD";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <1>; /* Dummy parameter for Hold-Tap compatibility */
+            #binding-cells = <0>; /* Dummy parameter for Hold-Tap compatibility */
             bindings
                 = <&macro_press &kp LSHFT>
                 , <&macro_press &kp LGUI>
@@ -24,7 +24,7 @@
         window_move_r_hold: window_move_r_hold {
             label = "WINDOW_MOVE_R_HOLD";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <1>;
+            #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LSHFT>
                 , <&macro_press &kp LGUI>
@@ -38,7 +38,7 @@
         os_nav_l_hold: os_nav_l_hold {
             label = "OS_NAV_L_HOLD";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <1>;
+            #binding-cells = <0>;
             /* Mac uses Ctrl + Left/Right for switching Workspaces/Spaces */
             bindings
                 = <&macro_press &kp LCTRL>
@@ -51,7 +51,7 @@
         os_nav_r_hold: os_nav_r_hold {
             label = "OS_NAV_R_HOLD";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <1>;
+            #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
                 , <&macro_press &kp RIGHT>
