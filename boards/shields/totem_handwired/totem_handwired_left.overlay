@@ -5,7 +5,3 @@
         zmk,battery = &vbatt;
     };
 };
-
-&kscan0 {
-    board-name = "totemck_left";
-};
