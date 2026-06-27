@@ -1,1 +1,15 @@
 #include "totem_handwired.dtsi"
+
+&default_transform {
+    col-offset = <6>;
+};
+
+/ {
+    chosen {
+        zmk,battery = &vbatt;
+    };
+};
+
+&kscan0 {
+    board-name = "totemck_right";
+};
