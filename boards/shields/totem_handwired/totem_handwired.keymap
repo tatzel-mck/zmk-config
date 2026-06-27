@@ -165,8 +165,8 @@
         adjust {
             bindings = <
          &none      &kp C_PREV   &kp C_VOL_UP &kp C_NEXT   &kp C_BRI_UP   &mhl 0 LS(LA(LEFT)) &mkp LCLK      &mmv MOVE_UP   &mkp RCLK      &mhr 0 LS(LA(RIGHT))
-&none    &none      &none        &kp C_VOL_DN &none        &kp C_BRI_DN   &nhl 0 LA(LEFT)     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &nhr 0 LA(RIGHT)
-         &none      &none        &kp C_PLAY_PAUSE &none    &none          &none               &none          &mkp MCLK      &none          &none              &none
+&none    &none      &none        &kp C_VOL_DN &none        &kp C_BRI_DN   &nhl 0 LA(LEFT)     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &nhr 0 LA(RIGHT)   &none
+         &none      &none        &kp C_PLAY_PAUSE &none    &none          &none               &none          &mkp MCLK      &none          &none
                                  &trans       &trans       &trans         &trans              &trans         &trans
             >;
         };
