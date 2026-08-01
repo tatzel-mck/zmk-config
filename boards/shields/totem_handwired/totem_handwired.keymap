@@ -135,43 +135,39 @@
     keymap {
         compatible = "zmk,keymap";
 
-        base {
-            /* Gallium v2 Base Layer (Maintains Home Row Mods) */
+        BASE {
             bindings = <
-         &kp B      &kp L      &kp D      &kp C      &kp V          &kp J      &kp Y      &kp O      &kp U      &kp COMMA
-&none    &hm LGUI N &hm LALT R &hm LCTRL T &hm LSHFT S &kp G          &kp P      &hm RSHFT H &hm RCTRL A &hm RALT E &hm RGUI I &none
-         &kp X      &kp Q      &kp M      &kp W      &kp Z          &kp K      &kp F      &kp SQT    &kp SEMI   &kp DOT
-                               &lt 1 ESC  &kp SPACE  &kp BSPC       &kp RET    &mo 2      &kp TAB
+          &kp B  &kp L  &kp D      &kp C      &kp V       &kp J      &kp Y      &kp O      &kp U     &kp COMMA
+&kp CAPS  &kp N  &kp R  &kp T      &kp S      &kp G       &kp P      &kp H      &kp A      &kp E     &kp I      &caps_word
+          &kp X  &kp Q  &kp M      &kp W      &kp Z       &kp K      &kp F      &kp APOS   &kp SEMI  &kp DOT
+                        &lt 0 ESC  &kp SPACE  &kp BSPC    &kp ENTER  &kp SPACE  &lt 0 TAB
             >;
         };
 
-        lower {
-            /* Programming Symbols, Operators, and Editing Actions */
+        LOWER {
             bindings = <
-         &caps_word &kp EXCL   &kp AT     &kp HASH   &kp DLLR       &kp CARET  &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR
-&kp GRAVE &kp UNDER  &kp MINUS  &kp EQUAL  &kp PLUS   &kp PIPE       &kp LT     &kp GT     &kp LBRC   &kp RBRC   &kp BSLH   &kp TILDE
-         &none      &kp LG(Z)  &kp LG(Y)  &kp LG(X)  &kp LG(C)      &kp LG(V)  &kp LBKT   &kp RBKT   &kp LA(BSPC) &none
-                               &trans     &trans     &trans         &trans     &trans     &trans
+           &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT            &kp CARET         &kp AMPS           &kp STAR  &kp LPAR  &kp RPAR
+&kp GRAVE  &kp UNDER  &kp MINUS  &kp EQUAL  &kp PLUS   &kp PIPE             &kp LT            &kp GT             &kp LBRC  &kp RBRC  &kp BACKSLASH &kp TILDE
+           &kp LG(Z)  &kp LG(Y)  &kp LG(X)  &kp LG(C)  &kp LG(V)            &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans    &trans    &trans
+                                 &trans     &trans     &kp LA(BACKSPACE)    &trans            &trans             &trans
             >;
         };
 
-        raise {
-            /* Navigation, Text Editing, Browser Navigation, and F-Keys */
+        RAISE {
             bindings = <
-         &kp F1       &kp F2       &kp F3       &kp F4       &kp F5             &kp F6     &kp F7       &kp F8     &kp F9        &kp F10
-&kp F11  &kp LA(TAB)  &kp LG(GRAVE) &kp LA(UP)   &kp C_AC_BACK &kp C_AC_FORWARD   &kp PG_UP  &kp HOME     &kp UP     &kp END       &none    &kp F12
-         &kp LA(BSPC) &kp LA(LEFT) &kp LA(DOWN) &kp LA(RIGHT) &kp LA(DEL)        &kp PG_DN  &kp LEFT     &kp DOWN   &kp RIGHT     &none
-                                   &trans       &trans       &kp DEL            &trans     &trans       &trans
+         &mt F1 N1    &mt F2 N2      &mt F3 N3     &mt F4 N4      &mt F5 N5           &mt F6 N6      &mt F7 N7 &mt F8 N8 &mt F9 N9  &mt F10 N0
+&kp F11  &kp LA(TAB)  &kp LG(GRAVE)  &kp LA(UP)    &kp C_AC_BACK  &kp C_AC_FORWARD    &kp PAGE_UP    &kp HOME  &kp UP    &kp END    &none    &kp F12
+         &none        &kp LA(LEFT)   &kp LA(DOWN)  &kp LA(RIGHT)  &kp LA(DEL)         &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &none
+                                     &trans        &trans         &kp DEL             &trans         &trans    &trans
             >;
         };
 
-        adjust {
-            /* Mouse, Scrolling, Media, Bluetooth, and hidden Bootloaders */
+        ADJUST {
             bindings = <
-         &bootloader &kp C_PREV   &kp C_VOL_UP &kp C_NEXT   &kp C_BRI_UP       &msc SCRL_UP   &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &bootloader
-&none    &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &kp C_VOL_DN &kp C_BRI_DN       &msc SCRL_DOWN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none     &none
-         &none       &none        &none        &kp C_PLAY_PAUSE &none          &none          &none          &mkp MCLK      &none           &none
-                                  &trans       &trans       &trans             &trans         &trans         &trans
+             &none           &kp C_PREV  &kp C_VOLUME_UP   &kp C_NEXT  &kp C_BRI_UP    &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &none
+&bootloader  &bt BT_CLR_ALL  &none       &kp C_VOL_DN      &none       &kp C_BRI_DN    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &bootloader
+             &bt BT_NXT      &none       &kp C_PLAY_PAUSE  &none       &none           &none           &none           &mkp MCLK       &none            &none
+                                         &trans            &trans      &trans          &trans          &trans          &trans
             >;
         };
     };
